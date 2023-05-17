@@ -6,12 +6,6 @@
 #00 01, 00 02, 00 03, 00 04, ... , 00 99, 01 02, ... , 97 99, 98 99
 #$>
 
-#FONCTION
-#GESTION D'ERREUR
-#PARSING
-#RESOLUTION
-#AFFICHAGE
-
 # FONCTION
 def cree_liste_de_chiffre()
     range = (0..9999) # crée une plage de nombres de 0 à 9999
@@ -28,9 +22,6 @@ def verif_chiffres_supérieurs_liste(liste_nombres)
     chiffres = nombre.to_s.chars.map(&:to_i) #transforme chaque selection en string puis en les separe en caracters puis transforme chaque char en integer
      premiere_paire = chiffres[0, 2].join('').to_i# Sélectionne les deux premiers chiffres (première paire)
      deuxieme_paire = chiffres[2, 2].join('').to_i# Sélectionne les deux chiffres suivants (deuxième paire)
-     #p chiffres
-     #p premiere_paire
-     #p deuxieme_paire
      deuxieme_paire > premiere_paire # Compare les est supprime de la liste ceux qui ne sont pas bon
   end
 end

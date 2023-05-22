@@ -14,7 +14,6 @@
 #Afficher error et quitter le programme en cas de problèmes d’arguments.
 
 #FONCTION
-
 def verifie_arguments(arg)
     if ARGV.empty?
     	erreur(true)

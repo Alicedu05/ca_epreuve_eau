@@ -44,7 +44,6 @@ chiffre = ARGV[0]
 
 #RESOLUTION
 index_chiffre = créé_suite_fibonacci(chiffre.to_i)
-créé_suite_fibonacci(chiffre.to_i)
 
 #AFFICHAGE
 puts index_chiffre

@@ -12,29 +12,23 @@
 
 #FONCTION
 
-def lister_identique(chaine_entiere,sous_chaine_entiere)
-    new_string = ""
-    chaine = chaine_entiere.chars
-    sous_chaine = sous_chaine_entiere.chars
-
-    sous_chaine.each do |i|
-        chaine.each do |j|
-            if j == i 
-                new_string << j # j o u r
-                break
-            end
+def trouve_chaine(chaine, sous_chaine)
+    i = 0
+    j = 0
+  
+    while i < chaine.size
+        if chaine[i] == sous_chaine[j]
+            j += 1
+            return true if j == sous_chaine.length
+        else
+            j = 0
         end
+  
+      i += 1
     end
-    return new_string
-end
-
-def comparer(string1,string2)
-    if string1.size == string2.size
-        return true
-    else
-        return false
-    end
-end
+  
+    return false
+  end
 
 #GESTION D'ERREUR
 abort("error") if ARGV.size !=2
@@ -45,8 +39,7 @@ chaine = ARGV[0]
 sous_chaine = ARGV[1]
 
 #RESOLUTION
-liste = lister_identique(chaine,sous_chaine)
-resultat = comparer(sous_chaine,liste)
+resultat = trouve_chaine(chaine,sous_chaine)
 
 #AFFICHAGE
 puts resultat

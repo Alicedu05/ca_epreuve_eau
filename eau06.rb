@@ -37,6 +37,7 @@ end
 #GESTION D'ERREUR
 abort("error") if ARGV.size != 1
 abort("error") if ARGV.empty?
+abort("error") if ARGV !=~ /[a-zA-Z]/
 
 #PARSING
 phrase = ARGV[0]

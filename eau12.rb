@@ -19,7 +19,7 @@ def trier(tableau)
 	for i in (tableau.size - 1).downto(0) # i passe du dernier index au premier (0) il est le pivot dans la boucle externe
         tableau_trie = true 
 
-        for j in 0..i-1 do # 
+        for j in 0..i-1 do # boucle interne qui permet de verifier les éléments entre eux et les inverser si bes et reduit de 1 depuis la fin tableau
             if tableau[j+1] < tableau[j]
                 temp = tableau[j]
                 tableau[j] = tableau[j+1]

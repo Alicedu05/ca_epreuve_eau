@@ -1,0 +1,1 @@
+print "Je viens de terminer l'épreuve. Quelques exo ont été une formalité, mais d'autres une galére eau05.rb et eau06.rb notament"

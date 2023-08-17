@@ -22,14 +22,14 @@ end
 
 #GESTION D'ERREUR
 abort("error") if ARGV.empty?
-abort("error") if ARGV.join !~ /[a-zA-Z]/ # concatene tous les mot de la chaine pour verifier si il n'y à pas de lettres passées en arguments 
+abort("error") if ARGV.join !~ /[a-zA-Z]/ # concatene tous les mot de la chaine pour verifier si il n'y à que des lettres passées en arguments 
 
 
 #PARSING
-phrase = ARGV
+phrase = ARGV.join(" ").split(" ") # Divisez la chaîne en mots individuels
 
 #RESOLUTION
 string_modifier = transformer(phrase)
 
 #AFFICHAGE
-print string_modifier
+puts string_modifier

@@ -15,19 +15,18 @@ new_string = []
 cpt = 0
 
     string.each_char do |caractere|
-
         if caractere =~ /[a-zA-Z]/
             if cpt % 2 == 0
-                new_string << string[caractere].upcase
+                new_string << caractere.upcase
                 cpt += 1
 
             else
-                new_string << string[caractere]
+                new_string << caractere
                 cpt += 1
 
             end
         else
-            new_string << string[caractere]
+            new_string << caractere
         end
 
     end
@@ -37,14 +36,13 @@ end
 #GESTION D'ERREUR
 abort("error") if ARGV.size != 1
 abort("error") if ARGV.empty?
-abort("error") if ARGV !=~ /[a-zA-Z]/
+abort("error") if ARGV[0] !~ /[a-zA-Z]/
 
 #PARSING
 phrase = ARGV[0]
 
 #RESOLUTION
 string_modifier = transformer(phrase)
-
 
 #AFFICHAGE
 print string_modifier
